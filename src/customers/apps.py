@@ -7,3 +7,4 @@ class CustomersConfig(AppConfig):
 
     def ready(self):
         import customers.signals
+        import customers.consumer
