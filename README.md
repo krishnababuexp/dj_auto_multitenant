@@ -6,15 +6,16 @@ customers is a Django app which is used to serve django tenant details. It is us
 
 Quick start
 -----------
+Install the package `pip install dj-auto-multitenant`.
 
-Now make change in your DATABASE_ENGINE
+Now make change in your DATABASE_ENGINE::
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django_tenants.postgresql_backend',
-        # ..
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django_tenants.postgresql_backend',
+            # ..
+        }
     }
-}
 
 Add DATABASE_ROUTERS setting, so that the correct apps can be synced, depending on what’s being synced (shared or tenant).
 
