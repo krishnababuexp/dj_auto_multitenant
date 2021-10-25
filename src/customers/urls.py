@@ -3,5 +3,5 @@ from django.urls.conf import include
 from . import views
 
 urlpatterns = [
-    # path('tenant/create/',views.CreateTenantView.as_view()),
+    path('tenant/create/',views.CreateTenantView.as_view()),
 ]

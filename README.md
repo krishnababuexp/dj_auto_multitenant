@@ -63,4 +63,6 @@ Add:
 
     TENANT_DOMAIN_MODEL = "customers.Domain"  # app.Model
 
+    CLOUDAMQP = "<YOUR CLOUDAMQP URL>"
+
 Now migrate customers `python manage.py migrate_schemas --shared`
