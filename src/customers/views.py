@@ -6,4 +6,5 @@ from .serializers import CreateTenantSerializer
 
 
 class CreateTenantView(generics.CreateAPIView):
+    """view for creating new tenant."""
     serializer_class = CreateTenantSerializer
