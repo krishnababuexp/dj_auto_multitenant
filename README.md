@@ -6,7 +6,7 @@ customers is a Django app which is used to serve django tenant details. It is us
 
 Quick start
 -----------
-Install the package `pip install dj-auto-multitenant`.
+Install the package `pip install dj-auto-tenant`.
 
 Now make change in your DATABASE_ENGINE
 
