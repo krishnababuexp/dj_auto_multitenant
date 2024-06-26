@@ -6,5 +6,5 @@ class CreateTenantSerializer(serializers.ModelSerializer):
     class Meta:
         """pass"""
         model = Client
-        fields = ('name',)
+        fields = ('name','schema_name','dc_tenant_uuid')
         

@@ -26,9 +26,11 @@ Add DATABASE_ROUTERS setting, so that the correct apps can be synced, depending 
 Add the middleware django_tenants.middleware.main.TenantMainMiddleware to the top of MIDDLEWARE, so that each request can be set to use the correct schema.
 
     MIDDLEWARE = (
-        'django_tenants.middleware.main.TenantMainMiddleware',
+        'django_tenants.middleware.main.TenantMainMiddleware',  # If subdomain based tenant
+        'django_tenants.middleware.TenantSubfolderMiddleware',  # If subfolder based tenant
         #...
     )
+
 
 Now change your INSTALLED APPS settings and seprate your shared apps and tenant apps. Add your `customers` app in SHARED APP.
 
