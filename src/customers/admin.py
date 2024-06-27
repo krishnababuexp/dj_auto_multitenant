@@ -4,5 +4,15 @@ from django.contrib import admin
 from .models import *
 
 
-admin.site.register(Client)
-admin.site.register(Domain)
+# admin.site.register(Client)
+# admin.site.register(Domain)
+
+@admin.register(Domain)
+class DomainAdmin(admin.ModelAdmin):
+    list_display = ('id', 'tenant', 'domain','is_primary')
+
+
+@admin.register(Client)
+class ClientAdmin(admin.ModelAdmin):
+    list_display = ('id', 'name','dc_tenant_uuid', 'schema_name', 'active',
+                    'created_on',)

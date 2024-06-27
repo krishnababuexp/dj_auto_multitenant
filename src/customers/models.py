@@ -4,7 +4,7 @@ from django_tenants.models import TenantMixin, DomainMixin
 import uuid
 class Client(TenantMixin):
     """Client model for creating new tenents."""
-    dc_tenant_uuid = models.UUIDField(default=uuid.uuid4, editable=False, primary_key=False)
+    dc_tenant_uuid = models.UUIDField(default=uuid.uuid4, editable=True, primary_key=False)
     name = models.CharField(max_length=100)
     paid_until =  models.DateField(blank=True,null = True)
     on_trial = models.BooleanField(default = True)
